@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- Icons links -->
+    <link rel="stylesheet" href="src/icons/remixicon/remixicon.css" />
+    <!-- GOOGLE FONTS OPEN SANS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- GOOGLE FONTS FIRA SANS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;1,600;1,700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Podcast Clone</title>
+  </head>
+  <body>
+    <!-- hero -->
+    <section class="hero__section">
+      <div class="message__us">
+        <i class="ri-facebook-fill"></i>
+      </div>
+
+      <div class="developer__btn" data-modal-open="#modalDev">
+        <i class="ri-user-2-fill"></i>
+      </div>
+
+      <btn class="btn__message__us">
+        <i class="ri-facebook-fill"></i>
+        Message us
+      </btn>
+    </section>
+
+    <!-- overlay -->
+    <div class="overlay" data-overlay></div>
+
+    <!-- developer popup -->
+    <div class="dev__popup modal" id="modalDev">
+      <div class="dev__popup__header">
+        <h3>Contact <span class="has-color">me</span></h3>
+        <button class="btn__close__modalDev" data-close-modal>
+          <i class="ri-close-fill"></i>
+        </button>
+      </div>
+
+      <div class="container">
+        <ul class="social__links">
+          <li>
+            <a href="https://twitter.com/shahid_a5" rel="noreferrer"
+              ><i class="ri-twitter-fill"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/shahidkhan119/" rel="noreferrer"
+              ><i class="ri-facebook-fill"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/shahidkhan_a5/" rel="noreferrer"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+          </li>
+          <li class="btn__whatsapp">
+            <a href="" rel="noreferrer"><i class="ri-whatsapp-fill"></i></a>
+          </li>
+          <li>
+            <a href="" rel="noreferrer"><i class="ri-github-fill"></i></a>
+          </li>
+        </ul>
+        <div class="input__field">
+          <div class="input">
+            <input type="text" class="mob__number" value="+93780152015" />
+            <i class="ri-clipboard-fill copy__mob__number"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- text message popup -->
+    <div class="text__message"></div>
+
+    <!-- NAVBAR STARTS -->
+    <div class="nav_bar">
+      <a href="index.html">
+        <div class="logo">
+          <img src="src/images/logo2.png" alt="logo" />
+        </div>
+      </a>
+
+      <ul>
+        <li>
+          <a href="#">Reviews</a>
+        </li>
+        <li>
+          <a href="#">Course</a>
+        </li>
+        <li>
+          <a href="#">Help</a>
+        </li>
+        <li>
+          <a href="#">Podcast</a>
+        </li>
+        <li>
+          <a href="#">University of Code</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Log In</a>
+        </li>
+      </ul>
+
+      <button class="menu_btn">
+        <i class="ri-menu-fill"></i>
+      </button>
+    </div>
+    <!-- NAVBAR ENDS -->
+
+    <!-- YELLOW CONTAINER STARTS -->
+    <div class="yellow_container">
+      <div class="hero_container">
+        <div class="left_side">
+          <img src="src/images/big_logo2.png" alt="Hero Img" />
+        </div>
+        <div class="right_side">
+          <h1>The Reactive Entrepreneur</h1>
+          <h4><b>Hosted by:</b> Syed-ul "Khudri"</h4>
+          <p>
+            🎥 Watch the VIDEO Episodes here:
+            https://links.papareact.com/podcast-videos | A weekly conversation
+            where we break down the challenges as an entrepreneur in the
+            developer/coding space, the lessons learnt along the...
+          </p>
+          <div class="social_links">
+            <div class="img">
+              <img src="src/images/kajabi_icon.png" alt="icon" />
+            </div>
+            <div class="img">
+              <img src="src/images/google_podcast.png" alt="icon" />
+            </div>
+            <div class="img">
+              <img src="src/images/spotify_icon.png" alt="icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- YELLOW CONTAINER ENDS -->
+
+    <!-- PODCAST SIDE STARTS -->
+    <div class="podcasts_container">
+      <!-- <div class="podcast_box">
+        <h2>
+          #10 - How to Build a 7-figure PR Business Empire - CEO & Singer
+          Stephanie Farah reveals all
+        </h2>
+        <small>Season #1 June 18,2021</small>
+        <div class="podcast_main_player">
+          <div class="podcast_player">
+            <div class="audio_img">
+              <img src="src/images/big_logo2.png" alt="" />
+            </div>
+            <div class="right_side">
+              <p>The Reactive Entrepreneur</p>
+              <h2>
+                #10 - How to Build a 7-figure PR Business Empire - CEO & Singer
+                Stephanie Farah reveals all
+              </h2>
+              <div class="audio_player">
+                <button class="playbtn">
+                  <i class="ri-play-fill"></i>
+                </button>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="custom-range"
+                />
+                <div class="audio_time">
+                  <small>00:00</small>
+                  <small>-50:49</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_links">
+            <button>
+              <i class="ri-download-line"></i>
+            </button>
+            <button>
+              <i class="ri-share-line"></i>
+            </button>
+          </div>
+        </div>
+        <p>
+          In this episode, Stephanie Farah and I delve into her incredible
+          journey from a growing music career to starting her very own 7-Figure
+          PR business in Dubai from Scratch and landing major clients such as
+          Dnata, Ferrari...
+        </p>
+        <button class="view_btn">View Episode</button>
+      </div> -->
+    </div>
+    <!-- PODCAST SIDE ENDS -->
+
+    <!-- JS LINK -->
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
