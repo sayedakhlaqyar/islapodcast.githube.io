@@ -33,7 +33,7 @@ const showData = (data) => {
           <img src="src/images/big_logo2.png" alt="" />
         </div>
         <div class="right_side">
-          <p>The Reactive Entrepreneur</p>
+          <p> STILL WORKING OOOOOON And New Updates are coming </p>
           <h2>${element.title}</h2>
           <div class="audio_player">
             <button class="playbtn" id="${element.audio.asset._ref}" data-id="${index}">
@@ -63,10 +63,7 @@ const showData = (data) => {
       </div>
     </div>
     <p>
-      In this episode, Stephanie Farah and I delve into her incredible
-      journey from a growing music career to starting her very own 7-Figure
-      PR business in Dubai from Scratch and landing major clients such as
-      Dnata, Ferrari...
+    STILL WORKING OOOOOON And New Updates are coming 
     </p>
     <button class="view_btn">View Episode</button>
   </div>
