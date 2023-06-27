@@ -34,13 +34,13 @@ lightBtn.addEventListener("click", () => {
 
 // GET ALL DATA FROM SANITY
 let musicAud = new Audio();
+
 let globalCurrentTime;
 const dataSet = "production";
 const projectId = "yyb5btl6";
 const query = encodeURIComponent("*[_type=='post']");
 
 const sanityURL = `https://${projectId}.api.sanity.io/v2021-10-21/data/query/${dataSet}?query=${query}`;
-
 const getAlldata = () => {
   fetch(sanityURL)
     .then((res) => res.json())
@@ -88,12 +88,13 @@ const showData = (data) => {
         </div>
       </div>
       <div class="bottom_links">
-        <button>
-          <i class="ri-download-line"></i>
-        </button>
-        <button>
+        <button class="downloadbtn"  id="${element.audio.asset._ref}" data-id="${index}">
+            <i class="ri-download-line"></i>
+         </button>
+
+      <button class="sharebtn">
           <i class="ri-share-line"></i>
-        </button>
+      </button>
       </div>
     </div>
     <p>
@@ -177,6 +178,28 @@ const showData = (data) => {
         musicAud.currentTime = globalCurrentTime;
         musicAud.pause();
       }
+    });
+  });
+  // DOWNLOAD BUTTON
+  const downloadBtn = document.querySelectorAll(".downloadbtn");
+
+  downloadBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let audioPath = btn.id;
+
+      let audioId = audioPath.split("-")[1];
+      let audioExt = audioPath.split("-")[2];
+      let audioFullPath = `${audioId}.${audioExt}`;
+      musicAud.src = `https://cdn.sanity.io/files/yyb5btl6/production/${audioFullPath}`;
+
+      fetch(musicAud.src)
+        .then((res) => res.blob())
+        .then((blob) => {
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = "Hope you learn something from it ";
+          a.click();
+        });
     });
   });
 };
