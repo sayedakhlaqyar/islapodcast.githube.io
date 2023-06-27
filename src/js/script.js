@@ -98,7 +98,7 @@ const showData = (data) => {
       </div>
     </div>
     <p>
-    STILL WORKING OOOOOON And New Updates are coming 
+    ${element.extra}
     </p>
     <button class="view_btn">View Episode</button>
   </div>
