@@ -1,3 +1,37 @@
+// LIGHT AND DARK MODE
+
+const lightBtn = document.querySelector(".toggleLight_btn");
+const bodyTheme = document.querySelector("body");
+
+window.addEventListener("load", () => {
+  let getThemeClrs = localStorage.getItem("theme");
+
+  if (getThemeClrs == "light") {
+    bodyTheme.classList.remove("dark");
+  } else {
+    bodyTheme.classList.add("dark");
+  }
+});
+
+lightBtn.addEventListener("click", () => {
+  let themeIcon = lightBtn.firstElementChild;
+  let themeText = lightBtn.firstElementChild.innerHTML;
+
+  if (bodyTheme.classList.contains("dark")) {
+    bodyTheme.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    bodyTheme.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
+
+  if (themeText == "light_mode") {
+    themeIcon.innerHTML = "dark_mode";
+  } else {
+    themeIcon.innerHTML = "light_mode";
+  }
+});
+
 // GET ALL DATA FROM SANITY
 let musicAud = new Audio();
 let globalCurrentTime;
@@ -26,7 +60,7 @@ const showData = (data) => {
     let show = `
      <div class="podcast_box">
     <h2>${element.title}</h2>
-    <small>Uploaded On: ${element.date}</small>
+    <small class="uploadedate">Uploaded On: ${element.date}</small>
     <div class="podcast_main_player">
       <div class="podcast_player">
         <div class="audio_img">
