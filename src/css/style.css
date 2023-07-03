@@ -85,6 +85,82 @@ ul {
   list-style: none;
 }
 
+/* LOADER START */
+
+.loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  display: none;
+}
+
+.loader.active {
+  display: block;
+}
+
+.loader::-webkit-scrollbar {
+  display: none;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: var(--white);
+}
+
+.loader.active::before,
+.loader.active::after {
+  animation: rotateA 2s linear infinite 0.5s;
+}
+@keyframes rotateA {
+  0%,
+  25% {
+    transform: rotate(0deg);
+  }
+  50%,
+  75% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    border-bottom-color: var(--bg-clr);
+  }
+}
+
+.loader::before {
+  transform: rotate(90deg);
+}
+
+.loader.active::before {
+  animation: rotateB 2s linear alternate-reverse infinite;
+}
+
+@keyframes rotateB {
+  0%,
+  25% {
+    transform: rotate(90deg);
+  }
+  50%,
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(450deg);
+    border-bottom-color: var(--sunglow);
+  }
+}
+
+/* LOADER END */
+
 /* NAVBAR STARTS */
 .nav_bar {
   display: flex;
@@ -191,12 +267,14 @@ ul {
   color: var(--dark);
   margin-top: 1rem;
   font-size: 1rem;
+  font-family: var(--fira-family);
 }
 
 .yellow_container .hero_container .right_side h4 b {
   font-weight: bold;
   font-size: 1.4rem;
   color: var(--dark);
+  font-family: var(--fira-family);
 }
 
 .yellow_container .hero_container .right_side p {
@@ -205,6 +283,7 @@ ul {
   line-height: 24px;
   font-weight: 400;
   color: var(--dark);
+  font-family: var(--fira-family);
 }
 
 .yellow_container .hero_container .right_side p a {
@@ -829,6 +908,25 @@ ul {
   margin-right: 0.5rem;
 }
 
+.welcome_popup {
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
+  background-color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: var(--bg-clr);
+  font-family: var(--ff-poppins);
+  font-weight: bold;
+}
+
+.welcome_popup span {
+  color: var(--chinese-black);
+  font-weight: 400;
+  margin-right: 10px;
+}
+
 /* PODCAST CONTAINER ENDS */
 
 @media screen and (max-width: 1024px) {
@@ -1007,5 +1105,25 @@ ul {
   }
   .yellow_container {
     padding: 0.5rem;
+  }
+
+  .loader {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    /* padding: 1rem; */
+  }
+
+  .loader::after,
+  .loader::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: var(--white);
+    animation: rotateA 2s linear infinite 0.5s;
   }
 }

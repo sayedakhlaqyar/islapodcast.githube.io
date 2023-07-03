@@ -50,7 +50,7 @@ const getAlldata = () => {
     });
 };
 
-getAlldata();
+// getAlldata();
 
 const podcastContainer = document.querySelector(".podcasts_container");
 // console.log(podcastContainer);
@@ -95,6 +95,12 @@ const showData = (data) => {
       <button class="sharebtn">
           <i class="ri-share-line"></i>
       </button>
+
+      <div class="loader_conttainer">
+      <div class="loader"></div>
+    </div>
+
+      
       </div>
     </div>
     <p>
@@ -182,6 +188,7 @@ const showData = (data) => {
   });
   // DOWNLOAD BUTTON
   const downloadBtn = document.querySelectorAll(".downloadbtn");
+  const loader = document.querySelector(".loader");
 
   downloadBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -192,6 +199,7 @@ const showData = (data) => {
       let audioFullPath = `${audioId}.${audioExt}`;
       musicAud.src = `https://cdn.sanity.io/files/yyb5btl6/production/${audioFullPath}`;
 
+      loader.classList.add("active");
       fetch(musicAud.src)
         .then((res) => res.blob())
         .then((blob) => {
@@ -199,6 +207,8 @@ const showData = (data) => {
           a.href = URL.createObjectURL(blob);
           a.download = "Hope you learn something from it ";
           a.click();
+
+          loader.classList.remove("active");
         });
     });
   });
@@ -362,6 +372,25 @@ menuBtn.addEventListener("click", () => {
 });
 
 // DOM ELEMENTS
+const userName = document.querySelector(".user_name");
+
+window.addEventListener("load", () => {
+  let getUsername = localStorage.getItem("userName");
+  if (!getUsername) {
+    userName.innerHTML = "Your Name";
+  } else {
+    userName.innerHTML = getUsername;
+  }
+});
+userName.addEventListener("blur", () => {
+  let setUserName = localStorage.setItem("userName", userName.textContent);
+  let getUsername = localStorage.getItem("userName");
+  if (!getUsername) {
+    userName.innerHTML = "Your Name";
+  } else {
+    userName.innerHTML = getUsername;
+  }
+});
 
 const closeBtn = document.querySelector(".close_btn");
 
