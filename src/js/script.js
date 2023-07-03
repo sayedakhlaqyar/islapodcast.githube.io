@@ -50,7 +50,7 @@ const getAlldata = () => {
     });
 };
 
-getAlldata();
+// getAlldata();
 
 const podcastContainer = document.querySelector(".podcasts_container");
 // console.log(podcastContainer);
@@ -398,3 +398,6 @@ closeBtn.addEventListener("click", () => {
   readMorePop.classList.remove("active");
   readPopOverlay.classList.remove("active");
 });
+
+const API_AUTH =
+  "372661390899-dgtj0vf6kj3j7jj1t4cffbf2334daf1f.apps.googleusercontent.com";
