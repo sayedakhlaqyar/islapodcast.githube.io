@@ -921,6 +921,14 @@ ul {
   font-weight: bold;
 }
 
+body.dark .welcome_popup {
+  background-color: var(--chinese-black);
+}
+
+body.dark .welcome_popup span {
+  color: var(--white);
+}
+
 .welcome_popup span {
   color: var(--chinese-black);
   font-weight: 400;
