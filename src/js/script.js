@@ -50,7 +50,7 @@ const getAlldata = () => {
     });
 };
 
-// getAlldata();
+getAlldata();
 
 const podcastContainer = document.querySelector(".podcasts_container");
 // console.log(podcastContainer);
