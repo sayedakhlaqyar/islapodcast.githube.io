@@ -217,9 +217,9 @@
       </div> -->
     </div>
 
-    <div class="welcome_popup" onclick="logout()">
+    <div class="welcome_popup logout-btn">
       <!-- <p>Welcome, <span contenteditable="true" class="user_name"></span>👋</p> -->
-      <p>Welcome, <span class="user"></span></p>
+      <p>Welcome 👋, <span class="user"></span></p>
       <!-- <img id="image" /> -->
     </div>
     <!-- PODCAST SIDE ENDS -->
@@ -239,6 +239,14 @@
       }
       window.history.pushState({}, document.title, "/" + "index.html");
       let info = JSON.parse(localStorage.getItem("authInfo"));
+
+      const logoutBtn = document.querySelector(".logout-btn");
+
+      if (info) {
+        logoutBtn.addEventListener("click", logout);
+      } else {
+        location.href = "./login.html";
+      }
       console.log(info["access_token"]);
       console.log(info["expires_in"]);
 
