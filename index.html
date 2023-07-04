@@ -106,7 +106,8 @@
     <div class="nav_bar">
       <a href="index.html">
         <div class="logo">
-          <img src="src/images/logo2.png" alt="logo" />
+          <!-- <img src="src/images/logo2.png" alt="logo" /> -->
+          <img id="image" alt="logo" />
         </div>
       </a>
 
@@ -219,7 +220,7 @@
     <div class="welcome_popup" onclick="logout()">
       <!-- <p>Welcome, <span contenteditable="true" class="user_name"></span>👋</p> -->
       <p>Welcome, <span class="user"></span></p>
-      <img id="image" />
+      <!-- <img id="image" /> -->
     </div>
     <!-- PODCAST SIDE ENDS -->
 
@@ -249,7 +250,7 @@
         .then((data) => data.json())
         .then((info) => {
           console.log(info);
-          document.getElementsByClassName("user").innerHTML += info.name;
+          document.querySelector(".user").innerHTML += info.name;
           document.getElementById("image").setAttribute("src", info.picture);
         });
 
