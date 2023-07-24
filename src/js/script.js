@@ -50,7 +50,7 @@ const getAlldata = () => {
     });
 };
 
-// getAlldata();
+getAlldata();
 
 const podcastContainer = document.querySelector(".podcasts_container");
 // console.log(podcastContainer);
@@ -358,7 +358,7 @@ const menuBtn = document.querySelector(".menu_btn");
 menuBtn.addEventListener("click", () => {
   const menuIcon = menuBtn.firstElementChild;
 
-  console.log(menuIcon);
+  // console.log(menuIcon);
 
   if (menuIcon.classList.contains("ri-menu-fill")) {
     menuIcon.classList.add("ri-close-fill");

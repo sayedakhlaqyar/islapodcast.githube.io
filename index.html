@@ -251,8 +251,8 @@
         location.href = "./login.html";
       }
 
-      console.log(info["access_token"]);
-      console.log(info["expires_in"]);
+      // console.log(info["access_token"]);
+      // console.log(info["expires_in"]);
 
       fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
         headers: {
@@ -261,7 +261,7 @@
       })
         .then((data) => data.json())
         .then((info) => {
-          console.log(info);
+          // console.log(info);
           document.querySelector(".user").innerHTML += info.name;
           document.getElementById("image").setAttribute("src", info.picture);
         });
