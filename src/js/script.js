@@ -50,7 +50,7 @@ const getAlldata = () => {
     });
 };
 
-getAlldata();
+// getAlldata();
 
 const podcastContainer = document.querySelector(".podcasts_container");
 // console.log(podcastContainer);
@@ -401,3 +401,8 @@ closeBtn.addEventListener("click", () => {
 
 const API_AUTH =
   "372661390899-dgtj0vf6kj3j7jj1t4cffbf2334daf1f.apps.googleusercontent.com";
+
+
+
+
+

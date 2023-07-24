@@ -11,7 +11,7 @@ function signIn() {
   var params = {
     client_id:
       "372661390899-dgtj0vf6kj3j7jj1t4cffbf2334daf1f.apps.googleusercontent.com",
-    redirect_uri: "https://islapodcast.netlify.app/index.html",
+    redirect_uri: "http://localhost:5500/index.html",
     response_type: "token",
     scope: "https://www.googleapis.com/auth/userinfo.profile",
     include_granted_scopes: "true",

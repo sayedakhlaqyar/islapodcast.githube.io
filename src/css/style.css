@@ -126,18 +126,24 @@ ul {
 }
 
 .form_container .login_btn .logo_img {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  background-color: var(--chinese-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
 }
 
 .form_container .login_btn .logo_img::-webkit-scrollbar {
   display: none;
 }
 .form_container .login_btn .logo_img img {
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 0.8rem;
 }
 
 .form_container .login_btn h1 {
